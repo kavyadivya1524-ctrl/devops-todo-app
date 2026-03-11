@@ -7,7 +7,7 @@ app.use(express.static('public'));
 
 // Database connection
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: process.env.postgresql://devops_todo_db_71k7_user:gfe3QShl4UVgYPX84YVQ0z6lqNQItkKV@dpg-d6og6frh46gs73ak2tjg-a/devops_todo_db_71k7,
   ssl: { rejectUnauthorized: false }
 });
 
