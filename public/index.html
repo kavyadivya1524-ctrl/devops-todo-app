@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DevOps Todo App</title>
+  <title>DevOps Todo App - Kavya</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial; background: #f0f2f5; min-height: 100vh; display: flex; justify-content: center; padding: 40px 20px; }
-    .container { background: white; border-radius: 12px; padding: 30px; width: 100%; max-width: 550px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); height: fit-content; }
-    h1 { font-size: 24px; margin-bottom: 20px; color: #333; }
+    body { font-family: Arial; background: #f0f2f5; min-height: 100vh; padding: 30px 20px; }
+    .header { text-align: center; margin-bottom: 30px; }
+    .header h1 { font-size: 28px; color: #333; }
+    .header p { color: #666; margin-top: 8px; font-size: 15px; }
+    .journey { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 30px; }
+    .step { background: white; border-radius: 12px; padding: 20px; width: 200px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+    .step .icon { font-size: 30px; margin-bottom: 10px; }
+    .step h3 { font-size: 14px; color: #333; margin-bottom: 6px; }
+    .step p { font-size: 12px; color: #888; }
+    .step .badge { display: inline-block; background: #28a745; color: white; font-size: 11px; padding: 3px 10px; border-radius: 20px; margin-top: 8px; }
+    .container { background: white; border-radius: 12px; padding: 30px; max-width: 550px; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .container h2 { font-size: 20px; margin-bottom: 20px; color: #333; }
     .input-row { display: flex; gap: 10px; margin-bottom: 20px; }
     input { flex: 1; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 15px; outline: none; }
     input:focus { border-color: #007bff; }
     .add-btn { padding: 12px 20px; background: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 15px; }
-    .add-btn:hover { background: #0056b3; }
     .count { font-size: 13px; color: #888; margin-bottom: 15px; }
     li { list-style: none; display: flex; align-items: center; gap: 10px; padding: 12px; border-radius: 8px; margin-bottom: 8px; background: #f8f9fa; }
     li.done span { text-decoration: line-through; color: #aaa; }
@@ -19,17 +27,64 @@
     .done-btn { padding: 6px 12px; background: #28a745; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 13px; }
     .delete-btn { padding: 6px 12px; background: #dc3545; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 13px; }
     .empty { text-align: center; color: #bbb; padding: 30px; font-size: 15px; }
+    .footer { text-align: center; margin-top: 30px; color: #aaa; font-size: 13px; }
   </style>
 </head>
 <body>
+
+  <div class="header">
+    <h1>🚀 DevOps Todo App</h1>
+    <p>Built by <strong>Kavya</strong> | Full DevOps Pipeline Project</p>
+  </div>
+
+  <!-- DevOps Journey Steps -->
+  <div class="journey">
+    <div class="step">
+      <div class="icon">💻</div>
+      <h3>Node.js + Express</h3>
+      <p>Backend API built with JavaScript</p>
+      <span class="badge">✅ Done</span>
+    </div>
+    <div class="step">
+      <div class="icon">🐳</div>
+      <h3>Docker</h3>
+      <p>App containerized with Dockerfile</p>
+      <span class="badge">✅ Done</span>
+    </div>
+    <div class="step">
+      <div class="icon">🐙</div>
+      <h3>GitHub</h3>
+      <p>Source code version controlled</p>
+      <span class="badge">✅ Done</span>
+    </div>
+    <div class="step">
+      <div class="icon">⚙️</div>
+      <h3>CI/CD Pipeline</h3>
+      <p>GitHub Actions auto deploy</p>
+      <span class="badge">✅ Done</span>
+    </div>
+    <div class="step">
+      <div class="icon">☁️</div>
+      <h3>Cloud Deploy</h3>
+      <p>Live on Render.com</p>
+      <span class="badge">✅ Done</span>
+    </div>
+  </div>
+
+  <!-- Todo App -->
   <div class="container">
-    <h1>🚀 My DevOps Todo App</h1>
+    <h2>🎯 Live Todo App</h2>
     <div class="input-row">
       <input id="todoInput" placeholder="Enter todo..." onkeypress="if(event.key==='Enter') addTodo()" />
       <button class="add-btn" onclick="addTodo()">Add</button>
     </div>
     <div class="count" id="count"></div>
     <ul id="todoList"></ul>
+  </div>
+
+  <div class="footer">
+    <p>🛠️ Tech Stack: Node.js | Docker | GitHub Actions | Render</p>
+    <p style="margin-top:6px;">👩‍💻 Kavya - DevOps Learner 🚀</p>
   </div>
 
   <script>
